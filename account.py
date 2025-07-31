@@ -4,3 +4,6 @@ class Account:
 
     def deposit(self, amount):
         self._balance += amount
+
+    def withdraw(self, param):
+        self._balance -= param
