@@ -1,1 +1,17 @@
-def test_account():
+from account import Account
+
+
+def test_create_account():
+    account = Account(10000)
+    assert account is not None
+def test_account_init_10000_won():
+    account = Account(10000)
+    assert account._balance == 10000
+def test_deposit_and_confirmation():
+    account = Account(10000)
+    account.deposit(500)
+    assert account._balance == 10500
+def test_withdraw_and_confirmation():
+    account = Account(10000)
+    account.withdraw(600)
+    assert account._balance == 9400
